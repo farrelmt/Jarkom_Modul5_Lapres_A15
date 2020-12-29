@@ -31,15 +31,15 @@ A. Membuat Topologi Jaringan
 B. Membuat Subnet Dengan Teknik VLSM
   - Menggambar subnet
   
-  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/1.png)
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/1.png)
   
   - Menentukan ip dengan pohon
   
-  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/2.png)
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/2.png)
   
   - Menentukan ip
   
-  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/3.png)
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/3.png)
   
   - Setting interfaces di tiap uml
   
@@ -208,7 +208,7 @@ D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis
     
     3. Set pada dhcp-server ```nano /etc/dhcp/dhcpd.conf``` sesuai gambar berikut :
     
-    ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/5.png)
+    ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/5.png)
     
   
   - Setting DHCP Relay
@@ -219,20 +219,20 @@ D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis
     
     3. Lalu untuk INTERFACES set dengan INTERFACES
       
-      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/6.png)
+      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/6.png)
       
-      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/7.png)
+      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/7.png)
       
-      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/8.png)
+      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/8.png)
   
   
   - Setting DHCP Client
   
     1. Pada SIDOARJO dan GRESIk atur interfacesnya dengan ```nano /etc/network/interfaces``` seperti berikut :
       
-       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/9.png)
+       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/9.png)
        
-       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/10.png)
+       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/10.png)
     
     2. Setelah diganti restart network dengan ```service networking restart```
     
@@ -246,7 +246,7 @@ MASQUERADE.
 
   ```iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o eth0 -j SNAT --to-source 10.151.72.66```
   
-  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/11.png)
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/11.png)
   
-  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/12.png)
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/12.png)
 
