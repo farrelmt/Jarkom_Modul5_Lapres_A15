@@ -1,6 +1,7 @@
 # Jarkom_Modul5_Lapres_A15
 
 SETTING TOPOLOGI
+
 A. Membuat Topologi Jaringan
   ```
   # Switch
@@ -29,13 +30,6 @@ A. Membuat Topologi Jaringan
   
 B. Membuat Subnet Dengan Teknik CIDR
 
-  ```
-  SURABAYA
-  
-  
-  ```
-  
-  
   ```
   SURABAYA
   auto lo
@@ -191,6 +185,11 @@ C. Melakukan Routing Pada Jaringan
   ```
 
 D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis 
+
+
+
+
+
 
 
 FIREWALL
