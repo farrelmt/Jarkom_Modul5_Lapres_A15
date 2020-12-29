@@ -188,16 +188,50 @@ D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis
 
   - Setting Server Mojokerto Sebagai DHCP Server
     
-    1. Install DHCP Server dengan  ```apt-get install isc-dhcp-server```
+    1. Install DHCP Server pada MOJOKERTO dengan  ```apt-get install isc-dhcp-server```
     
     2. Set Interfaces = "eth0" pada ```nano /etc/default/isc-dhcp-server``` 
     
     3. Set pada dhcp-server ```nano /etc/dhcp/dhcpd.conf``` sesuai gambar berikut :
     
   
-  - Setting DHCP Rellay
+  - Setting DHCP Relay
+  
+    1. Install DHCP Server pada BATU, SURABAYA, dan KEDIRI dengan ```apt-get install isc-dhcp-relay```
+    
+    2. Pada ```nano /etc/default/isc-dhcp-relay ``` untuk SERVERS set dengan SERVERS="10.151.73.131"
+    
+    3. Lalu untuk INTERFACES set dengan INTERFACES
+    
+      ```
+      BATU
+      INTERFACES = "eth0, eth1, eth2"
+      ```
+      
+      
+      ```
+      SURABAYA
+      INTERFACES = "eth1, eth2"
+      ```
+      
+      
+      ```
+      KEDIRI
+      INTERFACES = "eth0, eth1, eth2"
+      ```
+  
   
   - Setting DHCP Client
+  
+    1. Pada SIDOARJO dan GRESIk atur interfacesnya dengan ```nano /etc/network/interfaces``` seperti berikut :
+      
+       ```
+       auto eth0
+       iface eth0 inet dhcp
+       ```
+    
+    2. Setelah diganti restart network dengan ```service networking restart```
+    
 
 
 FIREWALL
