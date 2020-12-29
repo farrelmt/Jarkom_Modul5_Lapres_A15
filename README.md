@@ -186,10 +186,22 @@ C. Melakukan Routing Pada Jaringan
 
 D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis 
 
-
+  - Setting Server Mojokerto Sebagai DHCP Server
+    
+    1. Install DHCP Server dengan  ```apt-get install isc-dhcp-server```
+    
+    2. Set Interfaces = "eth0" pada ```nano /etc/default/isc-dhcp-server``` 
+    
+    3. Set pada dhcp-server ```nano /etc/dhcp/dhcpd.conf``` sesuai gambar berikut :
+    
+  
+  - Setting DHCP Rellay
+  
+  - Setting DHCP Client
 
 
 FIREWALL
+
 1. Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi
 SURABAYA menggunakan iptables, namun Bibah tidak ingin kalian menggunakan
 MASQUERADE.
