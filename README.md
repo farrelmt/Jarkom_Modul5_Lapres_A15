@@ -43,8 +43,6 @@ B. Membuat Subnet Dengan Teknik VLSM
   
   - Setting interfaces di tiap uml
   
-  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/4.png)
-  
   ```
   SURABAYA
   auto lo
@@ -220,12 +218,10 @@ D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis
     2. Pada ```nano /etc/default/isc-dhcp-relay ``` untuk SERVERS set dengan SERVERS="10.151.73.131"
     
     3. Lalu untuk INTERFACES set dengan INTERFACES
-    
+      
       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/6.png)
       
-      
       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/7.png)
-      
       
       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/8.png)
   
@@ -235,6 +231,8 @@ D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis
     1. Pada SIDOARJO dan GRESIk atur interfacesnya dengan ```nano /etc/network/interfaces``` seperti berikut :
       
        ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/9.png)
+       
+       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/10.png)
     
     2. Setelah diganti restart network dengan ```service networking restart```
     
@@ -247,4 +245,8 @@ SURABAYA menggunakan iptables, namun Bibah tidak ingin kalian menggunakan
 MASQUERADE.
 
   ```iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o eth0 -j SNAT --to-source 10.151.72.66```
+  
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/11.png)
+  
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/12.png)
 
