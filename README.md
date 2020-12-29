@@ -28,7 +28,7 @@ A. Membuat Topologi Jaringan
   xterm -T SIDOARJO -e linux ubd0=SIDOARJO,jarkom umid=SIDOARJO eth0=daemon,,,switch5 mem=96M &
   ```
   
-B. Membuat Subnet Dengan Teknik CIDR
+B. Membuat Subnet Dengan Teknik VLSM
 
   ```
   SURABAYA
@@ -185,9 +185,6 @@ C. Melakukan Routing Pada Jaringan
   ```
 
 D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis 
-
-
-
 
 
 
