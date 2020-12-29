@@ -29,7 +29,22 @@ A. Membuat Topologi Jaringan
   ```
   
 B. Membuat Subnet Dengan Teknik VLSM
-
+  - Menggambar subnet
+  
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/1.png)
+  
+  - Menentukan ip dengan pohon
+  
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/2.png)
+  
+  - Menentukan ip
+  
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/3.png)
+  
+  - Setting interfaces di tiap uml
+  
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/4.png)
+  
   ```
   SURABAYA
   auto lo
@@ -176,13 +191,14 @@ B. Membuat Subnet Dengan Teknik VLSM
   ```
 
 C. Melakukan Routing Pada Jaringan
-   Membuat bash file untuk dijalankan
+   - Membuat bash file untuk dijalankan di surabaya
   ```
   ip route add 10.151.73.128/29 via 192.168.0.1         #VIA BATU
   ip route add 192.168.1.0/24 via 192.168.0.1            #VIA BATU
   ip route add 192.168.2.0/24 via 192.168.0.5            #VIA KEDIRI
   ip route add 192.168.0.8/29 via 192.168.0.5            #VIA KEDIRI
   ```
+  - melakukan ```bash route.sh```
 
 D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis 
 
@@ -194,6 +210,8 @@ D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis
     
     3. Set pada dhcp-server ```nano /etc/dhcp/dhcpd.conf``` sesuai gambar berikut :
     
+    ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/5.png)
+    
   
   - Setting DHCP Relay
   
@@ -203,32 +221,20 @@ D. Membuat Subnet SIDOARJO dan GRESIK secara dinamis
     
     3. Lalu untuk INTERFACES set dengan INTERFACES
     
-      ```
-      BATU
-      INTERFACES = "eth0, eth1, eth2"
-      ```
+      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/6.png)
       
       
-      ```
-      SURABAYA
-      INTERFACES = "eth1, eth2"
-      ```
+      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/7.png)
       
       
-      ```
-      KEDIRI
-      INTERFACES = "eth0, eth1, eth2"
-      ```
+      ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/8.png)
   
   
   - Setting DHCP Client
   
     1. Pada SIDOARJO dan GRESIk atur interfacesnya dengan ```nano /etc/network/interfaces``` seperti berikut :
       
-       ```
-       auto eth0
-       iface eth0 inet dhcp
-       ```
+       ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/Screenshot/9.png)
     
     2. Setelah diganti restart network dengan ```service networking restart```
     
