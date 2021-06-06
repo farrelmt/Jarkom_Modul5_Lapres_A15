@@ -31,11 +31,12 @@ A. Membuat Topologi Jaringan
 B. Membuat Subnet Dengan Teknik VLSM
   - Menggambar subnet
   
-  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/1.png)
+  ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/tree/main/screenshot/1.png)
   
   - Menentukan ip dengan pohon
   
   ![fotooooo](https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/blob/main/screenshot/2.png)
+  https://github.com/farrelmt/Jarkom_Modul5_Lapres_A15/tree/main/screenshot
   
   - Menentukan ip
   
